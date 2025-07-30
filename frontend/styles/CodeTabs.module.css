@@ -1,0 +1,62 @@
+.codeTabs {
+  width: 35%;
+  background: gray;
+  border-radius: 8px;
+  padding: 12px;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tabHeader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tabHeader button {
+  flex: 1;
+  padding: 6px;
+  background: #1e293b;
+  color: #f8fafc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.activeTab {
+  background: #950607;
+}
+
+.codeBlock {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: pre-wrap;
+  margin-bottom: 12px;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.actions button {
+  flex: 1;
+  background: #950607;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #7a0405;
+}

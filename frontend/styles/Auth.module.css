@@ -1,0 +1,111 @@
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f7f8fa, black);
+  animation: bgFade 1s ease forwards;
+}
+
+@keyframes bgFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.authBox {
+  background: rgba(0, 0, 0, 0.8); 
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: boxAppear 0.8s ease forwards;
+}
+
+@keyframes boxAppear {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.authBox h2 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 22px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.authBox input {
+  margin: 8px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.authBox input:focus {
+  border-color: #950607;
+  box-shadow: 0 0 8px rgba(149, 6, 7, 0.4);
+  transform: scale(1.02);
+}
+
+.authBox button {
+  padding: 10px;
+  margin-top: 15px;
+  width: 100%;
+  background: grey;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.authBox button:hover {
+  background: green;
+  transform: scale(1.05);
+}
+
+.authBox p {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #555;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Floating subtle animation */
+.authBox {
+  animation: boxAppear 0.8s ease forwards, floatCard 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+
+.link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: green;
+  text-decoration: underline;
+}
